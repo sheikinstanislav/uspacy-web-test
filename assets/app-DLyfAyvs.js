@@ -693,7 +693,7 @@ template {
     white-space: nowrap;
     width: 1px;
   }
-`,pp=window.location.hostname==="localhost",Za=pp?"src/shared/assets/fonts":"./fonts",_n={MANROPE:pp?`${Za}/Manrope`:Za,MONTSERRAT:pp?`${Za}/Montserrat`:Za},CM=te`
+`,pp=window.location.hostname==="localhost",Za=pp?"src/shared/assets/fonts":"unspacy-web-test/fonts",_n={MANROPE:pp?`${Za}/Manrope`:Za,MONTSERRAT:pp?`${Za}/Montserrat`:Za},CM=te`
   @font-face {
     font-family: 'Montserrat';
     src: url('/${_n.MONTSERRAT}/Montserrat-Black.woff2')
