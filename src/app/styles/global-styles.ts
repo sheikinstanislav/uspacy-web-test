@@ -4,11 +4,9 @@ import emotionNormalize from 'emotion-normalize';
 import { Colors, Fonts } from '~/shared/styles';
 
 import { reset } from './reset';
-import { fonts } from './fonts';
 import { bgImage } from '~/shared/assets/img';
 
 export const globalStyles = css`
-  ${fonts}
   ${emotionNormalize}
   ${reset}
   body {

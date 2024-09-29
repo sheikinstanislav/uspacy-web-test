@@ -3,6 +3,7 @@
   "private": true,
   "version": "0.0.0",
   "type": "module",
+  "homepage": "https://sheikinstanislav.github.io/unspacy-web-test",
   "scripts": {
     "dev": "vite",
     "build": "tsc -b && vite build",
@@ -38,6 +39,7 @@
     "globals": "^15.9.0",
     "typescript": "^5.5.3",
     "typescript-eslint": "^8.0.1",
-    "vite": "^5.4.1"
+    "vite": "^5.4.1",
+    "vite-plugin-static-copy": "^1.0.6"
   }
 }
