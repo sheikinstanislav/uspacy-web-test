@@ -76,18 +76,24 @@ export const styles = {
 
       &.Mui-error.MuiFormLabel-filled {
         background-color: ${Colors.ERROR};
-        color: ${Colors.LIGHT_1} !important;
+        color: ${Colors.LIGHT_1};
+        span {
+          color: ${Colors.LIGHT_1};
+        }
       }
       &.Mui-error.Mui-focused {
         background-color: ${Colors.ERROR};
-        color: ${Colors.LIGHT_1} !important;
+
+        span {
+          color: ${Colors.LIGHT_1};
+        }
       }
 
       &.Mui-error {
-        color: rgba(255, 255, 255, 0.4) !important;
+        color: rgba(255, 255, 255, 0.4);
 
         span {
-          color: rgba(255, 255, 255, 0.4) !important;
+          color: rgba(255, 255, 255, 0.4);
         }
       }
     }
