@@ -109,7 +109,6 @@ To suppress this warning, you need to explicitly provide the \`palette.${t}Chann
       margin-top: 6px;
     }
     .Mui-error .MuiOutlinedInput-notchedOutline {
-      border: 2px solid ${se.ERROR};
       margin-top: 6px;
     }
 
@@ -147,7 +146,9 @@ To suppress this warning, you need to explicitly provide the \`palette.${t}Chann
         }
       }
 
-      &.Mui-error.MuiFormLabel-filled,
+      &.Mui-error.MuiFormLabel-filled {
+        background-color: ${se.ERROR};
+      }
       &.Mui-error.Mui-focused {
         background-color: ${se.ERROR};
       }
