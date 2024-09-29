@@ -44,7 +44,6 @@ export const styles = {
       margin-top: 6px;
     }
     .Mui-error .MuiOutlinedInput-notchedOutline {
-      border: 2px solid ${Colors.ERROR};
       margin-top: 6px;
     }
 
@@ -82,7 +81,9 @@ export const styles = {
         }
       }
 
-      &.Mui-error.MuiFormLabel-filled,
+      &.Mui-error.MuiFormLabel-filled {
+        background-color: ${Colors.ERROR};
+      }
       &.Mui-error.Mui-focused {
         background-color: ${Colors.ERROR};
       }
