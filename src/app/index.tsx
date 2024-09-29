@@ -5,4 +5,7 @@ const App = () => {
   return <Homepage />;
 };
 
-export default withHocs(App);
+const WrappedApp = withHocs(App) as React.FunctionComponent;
+WrappedApp.displayName = 'App';
+
+export default WrappedApp;

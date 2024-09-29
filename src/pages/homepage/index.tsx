@@ -1,6 +1,8 @@
 import { Button, Container, ScrollButton } from '~/shared/ui';
 import { styles } from './styles';
 import { AnimatedHeading, Banner, Form } from '~/components';
+import { scrollIntoView } from '~/shared/lib';
+import { motion } from 'framer-motion';
 
 export const Homepage = () => {
   return (
@@ -85,7 +87,9 @@ export const Homepage = () => {
               </svg>
             </a>
 
-            <Button>Зареєструватися</Button>
+            <Button onClick={() => scrollIntoView('contact-form')}>
+              Зареєструватися
+            </Button>
           </div>
         </Container>
       </header>
@@ -94,24 +98,76 @@ export const Homepage = () => {
         <section css={styles.hero.wrapper}>
           <Container>
             <div css={styles.hero.content.wrapper}>
-              <div css={styles.hero.info}>
+              <motion.div
+                initial={{ opacity: 0, x: 100 }}
+                whileInView={{
+                  opacity: 1,
+                  x: 0,
+                  transition: { delay: 0.2, duration: 0.5 },
+                }}
+                viewport={{ once: true, amount: 0.5 }}
+                css={styles.hero.info}
+              >
                 <p>Онлайн-конференція</p>
                 <div css={styles.divider}></div>
                 <p>30 квітня о 10:00</p>
-              </div>
-              <AnimatedHeading duration={1000} />
-              <Button css={styles.hero.content.button} variant="primary">
-                Зареєструватися
-              </Button>
+              </motion.div>
+              <motion.div
+                initial={{ opacity: 0, y: 100 }}
+                whileInView={{
+                  opacity: 1,
+                  y: 0,
+                  transition: { delay: 0.5, duration: 0.7 },
+                }}
+                viewport={{ once: true, amount: 0.5 }}
+              >
+                <AnimatedHeading duration={1000} />
+              </motion.div>
+
+              <motion.div
+                initial={{ opacity: 0, y: 100 }}
+                whileInView={{
+                  opacity: 1,
+                  y: 0,
+                  transition: { delay: 0.5, duration: 0.7 },
+                }}
+                viewport={{ once: true, amount: 0.5 }}
+              >
+                <Button
+                  onClick={() => scrollIntoView('contact-form')}
+                  css={styles.hero.content.button}
+                  variant="primary"
+                >
+                  Зареєструватися
+                </Button>
+              </motion.div>
 
               <div css={styles.row}>
-                <div css={styles.col.left}>
+                <motion.div
+                  initial={{ opacity: 0, y: -100 }}
+                  whileInView={{
+                    opacity: 1,
+                    y: 0,
+                    transition: { delay: 0.5, duration: 0.7 },
+                  }}
+                  viewport={{ once: true, amount: 0.5 }}
+                  css={styles.col.left}
+                >
                   <h3 css={styles.hero.content.title}>
                     Про що ця <br />
                     онлайн-конференція
                   </h3>
-                </div>
-                <div css={styles.col.right}>
+                </motion.div>
+                <motion.div
+                  initial={{ opacity: 0, y: -100 }}
+                  whileInView={{
+                    opacity: 1,
+                    y: 0,
+                    transition: { delay: 0.5, duration: 0.7 },
+                  }}
+                  viewport={{ once: true, amount: 0.5 }}
+                  css={styles.col.right}
+                >
                   <p css={styles.hero.content.desc}>
                     Щодня ми ходимо на роботу, зустрічаємося з друзями, донатимо
                     на Перемогу, робимо рутинні речі. Але чи замислюємося ми
@@ -119,13 +175,24 @@ export const Homepage = () => {
                     майбутнє? Чи мріємо ми?
                   </p>
 
-                  <ScrollButton />
-                </div>
+                  <ScrollButton
+                    onClick={() => scrollIntoView('contact-form')}
+                  />
+                </motion.div>
               </div>
             </div>
           </Container>
 
-          <div css={styles.bgElement}>
+          <motion.div
+            initial={{ opacity: 0, x: -150 }}
+            whileInView={{
+              opacity: 1,
+              x: 0,
+              transition: { delay: 1, duration: 0.7 },
+            }}
+            viewport={{ once: true, amount: 0.5 }}
+            css={styles.bgElement}
+          >
             <svg
               width="1668"
               height="362"
@@ -238,11 +305,20 @@ export const Homepage = () => {
                 </linearGradient>
               </defs>
             </svg>
-          </div>
+          </motion.div>
         </section>
-        <section>
+
+        <section css={styles.contact.wrapper}>
           <Container>
-            <Form />
+            <div css={styles.formWrapper}>
+              <Form
+                formTitle={
+                  <h2>
+                    Відвідати <br /> онлайн-конференцію
+                  </h2>
+                }
+              />
+            </div>
           </Container>
         </section>
       </main>

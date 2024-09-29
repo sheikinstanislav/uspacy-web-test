@@ -26,7 +26,6 @@ export const globalStyles = css`
     background-image: url(${bgImage});
     background-size: cover;
     background-repeat: no-repeat;
-    min-height: 2018px;
     background-position: center;
 
     &::after {
@@ -47,7 +46,6 @@ export const globalStyles = css`
 
       background: rgb(0 0 0 / 30%);
 
-      /*  don't work in Firefox */
       backdrop-filter: blur(5px);
     }
 
@@ -83,18 +81,18 @@ export const globalStyles = css`
   /* globalStyles.css */
   .MuiOutlinedInput-root {
     & fieldset {
-      border-color: transparent !important; // Override border color: ;
+      border-color: transparent !important;
     }
 
     &:hover fieldset {
-      border-color: ${Colors.ACCENT_3} !important; // Override hover border color: ;
+      border-color: ${Colors.ACCENT_3} !important;
     }
 
     &.Mui-focused fieldset {
-      border-color: ${Colors.ACCENT_3} !important; // Override focus border color: ;
+      border-color: ${Colors.ACCENT_3} !important;
     }
     &.Mui-error fieldset {
-      border-color: ${Colors.ERROR} !important; // Override focus border color: ;
+      border-color: ${Colors.ERROR} !important;
     }
   }
 `;

@@ -7,6 +7,7 @@ export type ButtonVariant = 'default' | 'primary';
 export interface Props extends ButtonHTMLAttributes<HTMLButtonElement> {
   variant?: ButtonVariant;
   extendStyle?: SerializedStyles;
+  onClick?: () => void;
 }
 
 export const Button: FC<Props> = ({

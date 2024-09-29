@@ -1,5 +1,5 @@
 import { css } from '@emotion/react';
-import { Colors, Fonts } from '~/shared/styles';
+import { Breakpoints, Colors, Fonts } from '~/shared/styles';
 
 export const styles = {
   input: css`
@@ -9,7 +9,11 @@ export const styles = {
       background-color: rgba(255, 255, 255, 0.04);
       border-radius: 4px;
       color: ${Colors.LIGHT_1};
-      padding: 20px;
+      padding: 16.5px 20px;
+
+      ${Breakpoints.MD} {
+        padding: 14px 16px;
+      }
     }
 
     .MuiOutlinedInput-notchedOutline {
@@ -37,8 +41,13 @@ export const styles = {
       font-size: 16px;
       line-height: 100%;
       color: rgba(255, 255, 255, 0.4);
-      margin-top: 6px;
+      margin-top: 5px;
       margin-left: 6px;
+
+      ${Breakpoints.MD} {
+        font-size: 15px;
+        margin-top: 2px;
+      }
       span {
         color: rgba(255, 255, 255, 0.4);
       }

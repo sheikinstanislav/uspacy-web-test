@@ -16,11 +16,30 @@ export const styles = {
 
   logo: css``,
 
-  main: css``,
+  formWrapper: css`
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  `,
+
+  contact: {
+    wrapper: css`
+      padding-top: 235px;
+      padding-bottom: 70px;
+
+      ${Breakpoints.XL} {
+        padding-top: 135px;
+      }
+      ${Breakpoints.LG} {
+        padding-top: 75px;
+      }
+    `,
+  },
 
   hero: {
     wrapper: css`
       padding-top: 100px;
+      position: relative;
 
       ${Breakpoints.MD} {
         padding-top: 60px;
@@ -45,6 +64,7 @@ export const styles = {
         width: 100%;
         max-width: 340px;
         font-size: 15px;
+        margin-bottom: 30px;
       }
     `,
 
@@ -65,6 +85,10 @@ export const styles = {
 
         color: ${Colors.LIGHT_1};
 
+        ${Breakpoints.XL} {
+          font-size: 28px;
+        }
+
         ${Breakpoints.SM} {
           font-size: 24px;
         }
@@ -79,8 +103,12 @@ export const styles = {
 
         color: ${Colors.LIGHT_1};
 
+        ${Breakpoints.XL} {
+          font-size: 20px;
+        }
+
         ${Breakpoints.SM} {
-          font-size: 18px;
+          font-size: 16px;
           line-height: 140%;
           margin-bottom: 32px;
         }
@@ -151,8 +179,10 @@ export const styles = {
 
   bgElement: css`
     svg {
+      position: absolute;
       margin-top: -220px;
       width: 100%;
+      pointer-events: none;
     }
   `,
 };

@@ -5,11 +5,15 @@ import { SerializedStyles } from '@emotion/react';
 export interface ScrollButtonProps
   extends ButtonHTMLAttributes<HTMLButtonElement> {
   extendStyle?: SerializedStyles;
+  onClick?: () => void;
 }
 
-export const ScrollButton: FC<ScrollButtonProps> = ({ extendStyle }) => {
+export const ScrollButton: FC<ScrollButtonProps> = ({
+  extendStyle,
+  ...ScrollButtonProps
+}) => {
   return (
-    <button css={[styles.scrollButton, extendStyle]}>
+    <button css={[styles.scrollButton, extendStyle]} {...ScrollButtonProps}>
       <svg
         width="14"
         height="18"

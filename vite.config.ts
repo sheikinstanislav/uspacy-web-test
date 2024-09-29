@@ -13,34 +13,9 @@ export default defineConfig({
     host: true,
     open: true,
   },
-  build: {
-    outDir: '../build',
-    emptyOutDir: true,
-    sourcemap: true,
 
-    rollupOptions: {
-      cache: false,
-      input: {
-        app: 'src/index.html',
-      },
-      output: {
-        assetFileNames: (assetInfo) => {
-          const name = assetInfo.name || '';
-          if (/\.css$/.test(name)) return 'assets/[name]-[hash][extname]';
-          if (/\.(gif|jpg|jpeg|png|svg)$/.test(name))
-            return 'images/[name].[hash][extname]';
-          if (/\.(woff|woff2|ttf|eot)$/.test(name))
-            return 'fonts/[name][extname]';
-          if (/recommendations-loader\.json$/.test(name))
-            return 'loaders/[name][extname]';
-          return 'assets/[name]-[hash][extname]';
-        },
-      },
-    },
-  },
   plugins: [
     react({
-      // Use React plugin in all *.jsx and *.tsx files
       include: '**/*.{jsx,tsx}',
       jsxImportSource: '@emotion/react',
     }),

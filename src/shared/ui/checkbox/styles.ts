@@ -1,5 +1,5 @@
 import { css } from '@emotion/react';
-import { Colors } from '~/shared/styles';
+import { Breakpoints, Colors } from '~/shared/styles';
 
 export const styles = {
   checkboxWrapper: css`
@@ -16,6 +16,10 @@ export const styles = {
 
     color: ${Colors.LIGHT_1};
 
+    ${Breakpoints.MD} {
+      font-size: 14px;
+    }
+
     a {
       color: ${Colors.ACCENT_2};
     }
@@ -24,7 +28,9 @@ export const styles = {
   checkbox: css`
     display: inline-block;
     height: 24px;
+    min-height: 24px;
     width: 24px;
+    min-width: 24px;
     padding: 4px;
     background: #fff;
     margin-right: 20px;
