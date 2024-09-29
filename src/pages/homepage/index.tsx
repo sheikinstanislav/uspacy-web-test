@@ -113,10 +113,10 @@ export const Homepage = () => {
                 <p>30 квітня о 10:00</p>
               </motion.div>
               <motion.div
-                initial={{ opacity: 0, y: 100 }}
+                initial={{ opacity: 0, x: -100 }}
                 whileInView={{
                   opacity: 1,
-                  y: 0,
+                  x: 0,
                   transition: { delay: 0.5, duration: 0.7 },
                 }}
                 viewport={{ once: true, amount: 0.5 }}
@@ -125,10 +125,10 @@ export const Homepage = () => {
               </motion.div>
 
               <motion.div
-                initial={{ opacity: 0, y: 100 }}
+                initial={{ opacity: 0, x: 100 }}
                 whileInView={{
                   opacity: 1,
-                  y: 0,
+                  x: 0,
                   transition: { delay: 0.5, duration: 0.7 },
                 }}
                 viewport={{ once: true, amount: 0.5 }}
@@ -144,10 +144,10 @@ export const Homepage = () => {
 
               <div css={styles.row}>
                 <motion.div
-                  initial={{ opacity: 0, y: -100 }}
+                  initial={{ opacity: 0, x: -100 }}
                   whileInView={{
                     opacity: 1,
-                    y: 0,
+                    x: 0,
                     transition: { delay: 0.5, duration: 0.7 },
                   }}
                   viewport={{ once: true, amount: 0.5 }}
@@ -159,10 +159,10 @@ export const Homepage = () => {
                   </h3>
                 </motion.div>
                 <motion.div
-                  initial={{ opacity: 0, y: -100 }}
+                  initial={{ opacity: 0, x: 100 }}
                   whileInView={{
                     opacity: 1,
-                    y: 0,
+                    x: 0,
                     transition: { delay: 0.5, duration: 0.7 },
                   }}
                   viewport={{ once: true, amount: 0.5 }}

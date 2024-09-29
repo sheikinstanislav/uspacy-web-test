@@ -9,7 +9,18 @@ export const styles = {
       background-color: rgba(255, 255, 255, 0.04);
       border-radius: 4px;
       color: ${Colors.LIGHT_1};
+      -webkit-text-fill-color: ${Colors.LIGHT_1};
       padding: 16.5px 20px;
+
+      &:-webkit-autofill {
+        -webkit-box-shadow: 0 0 0 1000px transparent inset;
+        box-shadow: 0 0 0 1000px transparent inset;
+        transition: background-color 5000s ease-in-out 0s;
+      }
+
+      &:-webkit-autofill:focus {
+        background-color: rgba(255, 255, 255, 0.04) !important;
+      }
 
       ${Breakpoints.MD} {
         padding: 14px 16px;

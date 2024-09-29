@@ -56,6 +56,12 @@ export const reset = css`
     appearance: none;
   }
 
+  input::-webkit-autofill {
+    -webkit-box-shadow: 0 0 0 30px #fff inset;
+    box-shadow: 0 0 0 30px #fff inset;
+    transition: background-color 5000s ease-in-out 0s;
+  }
+
   input[type='number'] {
     appearance: textfield;
   }

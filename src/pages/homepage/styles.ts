@@ -25,7 +25,7 @@ export const styles = {
   contact: {
     wrapper: css`
       padding-top: 235px;
-      padding-bottom: 70px;
+      padding-bottom: 100px;
 
       ${Breakpoints.XL} {
         padding-top: 135px;
