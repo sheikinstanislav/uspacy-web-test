@@ -76,6 +76,12 @@ To suppress this warning, you need to explicitly provide the \`palette.${t}Chann
       color: ${se.LIGHT_1};
       padding: 16.5px 20px;
 
+      &:-webkit-autofill {
+        -webkit-box-shadow: 0 0 0 30px #fff inset;
+        box-shadow: 0 0 0 30px #fff inset;
+        transition: background-color 5000s ease-in-out 0s;
+      }
+
       ${Ae.MD} {
         padding: 14px 16px;
       }
