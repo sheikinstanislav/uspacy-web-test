@@ -736,7 +736,7 @@ template {
     font-style: normal;
     font-display: swap;
   }
-`,CM="/assets/bg-img-CPMwPr-9.jpg",TM=te`
+`,CM="/uspacy-web-test/assets/bg-img-CPMwPr-9.jpg",TM=te`
   ${bM}
   ${SM}
   ${wM}
