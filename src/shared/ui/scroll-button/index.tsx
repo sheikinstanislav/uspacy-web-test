@@ -13,7 +13,11 @@ export const ScrollButton: FC<ScrollButtonProps> = ({
   ...ScrollButtonProps
 }) => {
   return (
-    <button css={[styles.scrollButton, extendStyle]} {...ScrollButtonProps}>
+    <button
+      css={[styles.scrollButton, extendStyle]}
+      {...ScrollButtonProps}
+      aria-label="Scroll to contact form"
+    >
       <svg
         width="14"
         height="18"

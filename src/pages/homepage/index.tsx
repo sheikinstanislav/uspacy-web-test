@@ -10,7 +10,7 @@ export const Homepage = () => {
       <header css={styles.header}>
         <Container>
           <div css={styles.headerWrapper}>
-            <a href="/" css={styles.logo}>
+            <a href="/" css={styles.logo} aria-label="Go to homepage">
               <svg
                 width="116"
                 height="33"
