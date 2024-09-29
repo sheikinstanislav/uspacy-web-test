@@ -8,6 +8,8 @@ export const styles = {
     .MuiInputBase-input {
       background-color: rgba(255, 255, 255, 0.04);
       border-radius: 4px;
+      font-family: ${Fonts.Manrope};
+      font-weight: 500;
       color: ${Colors.LIGHT_1};
       -webkit-text-fill-color: ${Colors.LIGHT_1};
       padding: 16.5px 20px;
