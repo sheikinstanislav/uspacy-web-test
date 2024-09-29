@@ -45,6 +45,7 @@ export const styles = {
     }
     .Mui-error .MuiOutlinedInput-notchedOutline {
       margin-top: 6px;
+      color: ${Colors.LIGHT_1} !important;
     }
 
     .MuiFormLabel-root {
@@ -60,10 +61,6 @@ export const styles = {
         font-size: 15px;
         margin-top: 2px;
       }
-      span {
-        color: rgba(255, 255, 255, 0.4);
-      }
-
       &.Mui-focused,
       &.MuiFormLabel-filled {
         color: ${Colors.LIGHT_1};
@@ -75,17 +72,23 @@ export const styles = {
         font-weight: 500;
         margin-top: 2px;
         margin-left: -3px;
-
-        span {
-          color: ${Colors.LIGHT_1};
-        }
       }
 
       &.Mui-error.MuiFormLabel-filled {
         background-color: ${Colors.ERROR};
+        color: ${Colors.LIGHT_1} !important;
       }
       &.Mui-error.Mui-focused {
         background-color: ${Colors.ERROR};
+        color: ${Colors.LIGHT_1} !important;
+      }
+
+      &.Mui-error {
+        color: rgba(255, 255, 255, 0.4) !important;
+
+        span {
+          color: rgba(255, 255, 255, 0.4) !important;
+        }
       }
     }
 
@@ -96,6 +99,12 @@ export const styles = {
         margin: 6px 0px 0px;
         color: ${Colors.ERROR};
         font-family: ${Fonts.Manrope};
+      }
+    }
+
+    .MuiFormControl-root {
+      label {
+        color: rgba(255, 255, 255, 0.4);
       }
     }
   `,
