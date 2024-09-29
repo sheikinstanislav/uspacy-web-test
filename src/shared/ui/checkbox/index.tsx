@@ -3,9 +3,9 @@ import { styles } from './styles';
 
 interface CustomCheckboxProps extends React.HTMLAttributes<HTMLInputElement> {
   label: JSX.Element;
-  name: string; // Add name to link with Formik
-  checked: boolean; // Use Formik's checked value
-  onChange: (e: React.ChangeEvent<HTMLInputElement>) => void; // Use Formik's onChange handler
+  name: string;
+  checked: boolean;
+  onChange: (e: React.ChangeEvent<HTMLInputElement>) => void;
 }
 
 export const CustomCheckbox: FC<CustomCheckboxProps> = ({
@@ -18,13 +18,13 @@ export const CustomCheckbox: FC<CustomCheckboxProps> = ({
     <label css={styles.checkboxWrapper}>
       <input
         type="checkbox"
-        name={name} // Bind the name from Formik
-        checked={checked} // Bind the checked state from Formik
-        onChange={onChange} // Use Formik's onChange handler
+        name={name}
+        checked={checked}
+        onChange={onChange}
       />
 
       <svg
-        css={[styles.checkbox, checked && styles.checked]} // Update based on Formik's checked state
+        css={[styles.checkbox, checked && styles.checked]}
         aria-hidden="true"
         viewBox="0 0 17 14"
         fill="none"
